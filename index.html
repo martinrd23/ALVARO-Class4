@@ -1,0 +1,365 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Álvaro · Session 4 · Complete Resource</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Patrick+Hand&display=swap');
+:root{
+  --navy:#17324D;--navy2:#0d2f52;--blue:#2E8FB8;--sky:#EAF6FD;--mint:#EAF7F2;
+  --yellow:#FFD75E;--yellow2:#FFF4C7;--cream:#FFFDF8;--white:#fff;--pink:#FFF1F4;
+  --text:#17324D;--muted:#667D90;--line:#D7E3EB;--green:#2F8B69;--red:#C4535D;
+  --purple:#8E73C9;--shadow:0 12px 28px rgba(23,50,77,.10)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#F4F1EA;color:var(--text);font-family:'Nunito',Arial,sans-serif}button{font:inherit}a{color:inherit;text-decoration:none}
+.topbar{position:sticky;top:0;z-index:50;background:linear-gradient(90deg,var(--navy2),#1B5D8C);color:#fff;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+.topbar .inner{max-width:1180px;margin:auto;padding:11px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-weight:900}.brand small{display:block;font-size:11px;color:#D6E8F4;margin-top:2px}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{font-size:12px;font-weight:900;padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.10)}
+.progress-shell{position:sticky;top:62px;z-index:45;height:7px;background:#DCE6EC}.progress{height:100%;width:0;background:linear-gradient(90deg,#42A89D,var(--yellow));transition:.18s}
+.hero{background:linear-gradient(135deg,var(--cream) 67%,var(--sky) 67%);padding:58px 20px 48px;border-bottom:1px solid var(--line)}.wrap{max-width:1120px;margin:auto}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center}.eyebrow{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.hero h1{font-size:64px;line-height:.93;letter-spacing:-2px;margin:10px 0 14px}.hero h1 em{font-family:'Patrick Hand';font-style:normal;font-weight:400;background:linear-gradient(transparent 72%,var(--yellow) 72%)}
+.hero p{font-size:18px;font-weight:700;color:#35536B;max-width:720px}.chips,.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.chip,.pill{border:1px solid var(--line);background:#fff;padding:8px 11px;border-radius:999px;font-weight:800;font-size:12px}
+.note{background:var(--yellow);padding:26px;border-radius:22px;font-family:'Patrick Hand';font-size:30px;line-height:1.05;text-align:center;transform:rotate(1deg);box-shadow:var(--shadow)}
+section{padding:44px 20px}.white{background:#fff}.sky{background:#F3FAFD}.mint{background:#F3FBF7}.section-title{font-size:34px;margin:0;font-weight:900;letter-spacing:-1px}.underline{width:84px;height:6px;background:var(--yellow);border-radius:99px;margin:8px 0 18px}
+.lead{font-size:16px;color:var(--muted);font-weight:700;max-width:920px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px;box-shadow:0 6px 15px rgba(23,50,77,.05)}.card h3{margin:0 0 8px;font-size:17px}.card p{margin:0;font-size:13px;line-height:1.55}.card.skyc{background:var(--sky)}.card.mintc{background:var(--mint)}.card.yellowc{background:var(--yellow2)}.card.pinkc{background:var(--pink)}
+.metric strong{font-size:30px;display:block}.metric{font-size:12px;font-weight:800}.bookref{margin-top:14px;border:2px dashed #B9DAE9;background:#fff;border-radius:14px;padding:12px 14px;display:flex;gap:10px;align-items:center;font-weight:800;font-size:13px}.badge{background:var(--purple);color:#fff;border-radius:8px;padding:5px 8px;font-size:10px;font-weight:900}
+.rule{padding:16px;border-radius:15px;background:white;border:1px solid var(--line);margin:10px 0}.rule b{color:var(--blue)}.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:20px}.time{background:white;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}.time strong{display:block;font-size:21px}.time span{font-size:11px;color:var(--muted);font-weight:900}
+.compare{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 5px 14px rgba(23,50,77,.05)}.compare th,.compare td{border:1px solid var(--line);padding:12px 13px;text-align:left;font-size:13px;vertical-align:top}.compare th{background:var(--sky);font-size:12px}.compare td:first-child{font-weight:900}
+.example{background:#fff;border-left:5px solid var(--yellow);padding:10px 12px;border-radius:9px;margin:8px 0;font-size:14px;font-weight:800}.vocab{display:flex;flex-wrap:wrap;gap:8px}.vocab span{background:#fff;border:1px solid var(--line);padding:8px 11px;border-radius:12px;font-size:12px;font-weight:800}
+.assess-grid{display:grid;grid-template-columns:220px 1fr;gap:20px;margin-top:20px}.side{position:sticky;top:92px;height:max-content;background:#F4F8FA;padding:8px;border-radius:16px;border:1px solid var(--line)}.side button{width:100%;border:0;background:transparent;color:var(--navy);text-align:left;border-radius:10px;padding:11px;font-weight:900;cursor:pointer}.side button small{display:block;color:var(--muted);font-weight:700;margin-top:3px}.side button.active{background:var(--navy);color:#fff}.side button.active small{color:#D9E9F3}
+.panel{display:none}.panel.active{display:block}.qcard{background:#fff;border:1px solid var(--line);border-radius:17px;padding:17px;margin:0 0 12px;box-shadow:0 5px 14px rgba(23,50,77,.05)}.qnum{font-size:11px;color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:.08em}.qtext{font-size:15px;font-weight:900;margin:6px 0 11px}.options{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.option{border:2px solid #D9E4EA;background:#fff;color:var(--navy);padding:10px;border-radius:11px;text-align:left;cursor:pointer;font-weight:800}.option:hover:not(:disabled){border-color:var(--blue);background:#F6FBFE}.option.correct{border-color:var(--green);background:#EAF7F1;color:#1D6A50}.option.wrong{border-color:var(--red);background:#FFF0F1;color:#963844}.option:disabled{cursor:default}.feedback{display:none;margin-top:9px;border-radius:10px;padding:9px 11px;font-size:12px;font-weight:800}.feedback.show{display:block}.feedback.good{background:#EAF7F1;color:#1D6A50}.feedback.bad{background:#FFF0F1;color:#963844}
+.scorebox{display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:var(--navy);color:#fff;border-radius:16px;padding:14px 16px;margin-bottom:14px}.scorebox strong{font-size:26px}.mini-progress{flex:1;min-width:160px;height:9px;background:rgba(255,255,255,.18);border-radius:999px;overflow:hidden}.mini-fill{height:100%;width:0;background:var(--yellow);transition:.2s}
+.timer{display:flex;align-items:center;gap:10px;background:var(--yellow2);border:1px solid #ECD373;padding:12px 14px;border-radius:14px;margin-bottom:14px}.timer strong{font-size:25px}.btn{border:0;border-radius:999px;padding:10px 15px;font-weight:900;cursor:pointer}.btn.primary{background:var(--navy);color:#fff}.btn.secondary{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.errorlog{width:100%;border-collapse:collapse;margin-top:12px}.errorlog th,.errorlog td{border:1px solid var(--line);padding:10px;font-size:12px}.errorlog th{background:var(--sky)}.errorlog td[contenteditable="true"]{background:#fff;min-width:140px}
+.callout{border-radius:18px;padding:18px;background:var(--navy);color:#fff}.callout h3{margin-top:0}.callout .hand{font-family:'Patrick Hand';font-size:27px;color:var(--yellow)}.footer{background:var(--navy);color:#fff;padding:32px 20px;text-align:center}.footer strong{font-family:'Patrick Hand';font-size:31px}
+.match-choice{width:100%;border:2px solid #D9E4EA;background:#fff;color:var(--navy);padding:11px;border-radius:12px;text-align:left;cursor:pointer;font-weight:800;margin-bottom:8px}.match-choice.selected{border-color:var(--purple);background:#F4F0FB}.match-choice.done{border-color:var(--green);background:#EAF7F1;color:#1D6A50;cursor:default}.match-choice.bad{border-color:var(--red);background:#FFF0F1;color:#963844}
+.memory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.memory-card{min-height:92px;border:0;border-radius:14px;background:linear-gradient(135deg,var(--navy),#245F8C);color:#fff;cursor:pointer;padding:10px;display:grid;place-items:center;text-align:center;font-weight:900;box-shadow:0 6px 14px rgba(23,50,77,.12);position:relative}.memory-card .mem-num{position:absolute;top:7px;left:8px;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;font-size:11px}.memory-card .mem-face{opacity:0;transform:scale(.94);transition:.15s}.memory-card.flipped,.memory-card.matched{background:#fff;color:var(--navy);border:2px solid #B9DCEA}.memory-card.flipped .mem-face,.memory-card.matched .mem-face{opacity:1;transform:none}.memory-card.matched{background:#EAF7F1;border-color:var(--green);cursor:default}
+@media(max-width:900px){.hero-grid,.assess-grid{grid-template-columns:1fr}.side{position:static;display:grid;grid-template-columns:repeat(2,1fr)}.grid4,.grid3,.timeline{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:50px}.navlinks{display:none}}
+@media(max-width:700px){.memory-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.grid4,.grid3,.grid2,.timeline,.options,.side{grid-template-columns:1fr}.hero h1{font-size:43px}.hero{padding-top:38px}.note{font-size:25px}.memory-grid{grid-template-columns:repeat(2,1fr)}}
+
+.formula{font-family:'Patrick Hand';font-size:25px;color:var(--navy);background:var(--yellow2);border-radius:14px;padding:12px 14px;margin:10px 0}
+.mini-label{display:inline-block;background:var(--navy);color:#fff;border-radius:999px;padding:4px 8px;font-size:10px;font-weight:900;margin-bottom:7px}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.strip div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center;font-size:12px;font-weight:900}
+.context-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.context{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.context strong{display:block;color:var(--blue);font-size:12px;margin-bottom:6px}
+.review-note{background:linear-gradient(135deg,var(--mint),var(--sky));border:1px solid var(--line);border-radius:16px;padding:15px;margin-top:14px}
+@media(max-width:900px){.strip{grid-template-columns:repeat(2,1fr)}.context-grid{grid-template-columns:1fr}}
+
+.explain{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 5px 14px rgba(23,50,77,.05)}
+.explain h3{margin:0 0 8px;font-size:18px}.explain p{margin:7px 0;font-size:14px;line-height:1.65}
+.keyidea{background:var(--yellow2);border-left:5px solid var(--yellow);border-radius:12px;padding:13px 15px;margin:12px 0;font-weight:800}
+.structure{background:var(--sky);border-radius:14px;padding:12px 14px;margin:10px 0;font-weight:900}
+.trap{background:#FFF0F1;border:1px solid #F0C6CC;border-radius:13px;padding:12px 14px;margin:10px 0;color:#8F3C47;font-weight:800}
+.check{background:#EAF7F1;border:1px solid #B7DEC9;border-radius:13px;padding:12px 14px;margin:10px 0;color:#1F6D53;font-weight:800}
+.microgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+.micro{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}.micro strong{display:block;color:var(--blue);font-size:12px;margin-bottom:6px}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}.flow div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px;text-align:center;font-size:12px;font-weight:800}.flow b{display:block;font-size:17px;color:var(--navy);margin-bottom:4px}
+.own-resource{border:2px dashed #B9DAE9;background:#F8FCFE;border-radius:16px;padding:15px 16px;margin:14px 0}.own-resource .tag{display:inline-block;background:var(--purple);color:#fff;border-radius:999px;padding:4px 8px;font-size:10px;font-weight:900;margin-bottom:8px}
+.contrast-box{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}.contrast-good,.contrast-bad{border-radius:14px;padding:14px;font-size:13px;font-weight:800}.contrast-good{background:#EAF7F1;color:#1F6D53;border:1px solid #B7DEC9}.contrast-bad{background:#FFF0F1;color:#8F3C47;border:1px solid #F0C6CC}
+@media(max-width:900px){.microgrid,.flow,.contrast-box{grid-template-columns:1fr}}
+
+.explain{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 5px 14px rgba(23,50,77,.05)}
+.explain h3{margin:0 0 8px;font-size:18px}.explain p{margin:7px 0;font-size:14px;line-height:1.68}
+.keyidea{background:var(--yellow2);border-left:5px solid var(--yellow);border-radius:12px;padding:13px 15px;margin:12px 0;font-weight:800}
+.structure{background:var(--sky);border-radius:14px;padding:12px 14px;margin:10px 0;font-weight:900}
+.trap{background:#FFF0F1;border:1px solid #F0C6CC;border-radius:13px;padding:12px 14px;margin:10px 0;color:#8F3C47;font-weight:800}
+.check{background:#EAF7F1;border:1px solid #B7DEC9;border-radius:13px;padding:12px 14px;margin:10px 0;color:#1F6D53;font-weight:800}
+.microgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+.micro{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.micro strong{display:block;color:var(--blue);font-size:12px;margin-bottom:6px}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.flow div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px;text-align:center;font-size:12px;font-weight:800}
+.flow b{display:block;font-size:17px;color:var(--navy);margin-bottom:4px}
+.own-resource{border:2px dashed #B9DAE9;background:#F8FCFE;border-radius:16px;padding:15px 16px;margin:14px 0}
+.own-resource .tag{display:inline-block;background:var(--purple);color:#fff;border-radius:999px;padding:4px 8px;font-size:10px;font-weight:900;margin-bottom:8px}
+.contrast-box{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.contrast-good,.contrast-bad{border-radius:14px;padding:14px;font-size:13px;font-weight:800}
+.contrast-good{background:#EAF7F1;color:#1F6D53;border:1px solid #B7DEC9}
+.contrast-bad{background:#FFF0F1;color:#8F3C47;border:1px solid #F0C6CC}
+.formula{font-family:'Patrick Hand';font-size:25px;color:var(--navy);background:var(--yellow2);border-radius:14px;padding:12px 14px;margin:10px 0}
+.mini-label{display:inline-block;background:var(--navy);color:#fff;border-radius:999px;padding:4px 8px;font-size:10px;font-weight:900;margin-bottom:7px}
+.context-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.context{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.context strong{display:block;color:var(--blue);font-size:12px;margin-bottom:6px}
+.review-note{background:linear-gradient(135deg,var(--mint),var(--sky));border:1px solid var(--line);border-radius:16px;padding:15px;margin-top:14px}
+.mini-table{width:100%;border-collapse:collapse;margin:12px 0}.mini-table th,.mini-table td{border:1px solid var(--line);padding:10px;font-size:12px;text-align:left}.mini-table th{background:var(--sky)}
+.topic-index{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.topic-index div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;font-size:12px;font-weight:900}
+@media(max-width:900px){.microgrid,.flow,.contrast-box,.context-grid,.topic-index{grid-template-columns:1fr}}
+
+.rule-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 5px 14px rgba(23,50,77,.05)}
+.rule-card h3{margin:0 0 8px;font-size:18px}.rule-card p{font-size:14px;line-height:1.68;margin:7px 0}
+.keyidea{background:var(--yellow2);border-left:5px solid var(--yellow);border-radius:12px;padding:13px 15px;margin:12px 0;font-weight:800}
+.structure{background:var(--sky);border-radius:14px;padding:12px 14px;margin:10px 0;font-weight:900}
+.trap{background:#FFF0F1;border:1px solid #F0C6CC;border-radius:13px;padding:12px 14px;margin:10px 0;color:#8F3C47;font-weight:800}
+.check{background:#EAF7F1;border:1px solid #B7DEC9;border-radius:13px;padding:12px 14px;margin:10px 0;color:#1F6D53;font-weight:800}
+.microgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+.micro{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.micro strong{display:block;color:var(--blue);font-size:12px;margin-bottom:6px}
+.topic-index{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.topic-index div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;font-size:12px;font-weight:900}
+.scale{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:14px 0}
+.scale div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center;font-size:12px;font-weight:900}
+.formula{font-family:'Patrick Hand';font-size:24px;color:var(--navy);background:var(--yellow2);border-radius:14px;padding:12px 14px;margin:10px 0}
+.quant-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.quant-box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
+.prefix-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.prefix{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
+.prefix strong{font-size:18px;color:var(--navy);display:block;margin-bottom:5px}
+.context-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.context{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.context strong{display:block;color:var(--blue);font-size:12px;margin-bottom:6px}
+.review-note{background:linear-gradient(135deg,var(--mint),var(--sky));border:1px solid var(--line);border-radius:16px;padding:15px;margin-top:14px}
+@media(max-width:900px){.microgrid,.topic-index,.quant-grid,.prefix-grid,.context-grid{grid-template-columns:1fr}.scale{grid-template-columns:repeat(3,1fr)}}
+
+.quick-practice{margin:18px 0 30px;padding:16px;border:1px solid var(--line);border-radius:17px;background:#F8FCFE}
+.quick-practice h3{margin:0 0 5px;font-size:17px}.quick-practice>p{margin:0 0 12px;font-size:12px;color:var(--muted);font-weight:800}
+.quick-q{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.quick-q .quick-text{font-weight:900;margin-bottom:9px}
+.quick-q .quick-options{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.quick-q button{border:1px solid var(--line);background:#fff;border-radius:11px;padding:9px;text-align:left;cursor:pointer;font:inherit;font-size:12px}
+.quick-q button:hover{border-color:var(--blue)}
+.quick-q button:disabled{cursor:default}
+.quick-q button.correct{background:#EAF7F1;border-color:#83C7A8;color:#1F6D53;font-weight:900}
+.quick-q button.wrong{background:#FFF0F1;border-color:#E8AAB2;color:#8F3C47;font-weight:900}
+.quick-feedback{display:none;margin-top:9px;padding:8px 10px;border-radius:10px;font-size:11px;font-weight:800}
+.quick-feedback.show{display:block}.quick-feedback.good{background:#EAF7F1;color:#1F6D53}.quick-feedback.bad{background:#FFF0F1;color:#8F3C47}
+.extra-examples{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}
+.extra-example{background:#fff;border:1px solid var(--line);border-radius:13px;padding:12px;font-size:12px;line-height:1.5}
+.extra-example b{color:var(--navy)}
+@media(max-width:700px){.quick-q .quick-options,.extra-examples{grid-template-columns:1fr}}
+</style></head><body>
+<nav class="topbar"><div class="inner"><div class="brand">English with Mr. Rengifo<small>Álvaro · Exam Preparation · Session 4</small></div>
+<div class="navlinks"><a href="#overview">Overview</a><a href="#grammar">Grammar</a><a href="#practice">Practice</a><a href="#timed">Timed Block</a><a href="#gamezone">Game Zone</a><a href="#homework">Homework</a></div></div></nav>
+<div class="progress-shell"><div class="progress" id="scrollProgress"></div></div>
+<header class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Session 4 · Adjectives, Adverbs & Quantifiers · American English</div>
+<h1>Describe precisely.<br><em>Choose by function.</em></h1>
+<p>This resource is your main Week 4 study guide. You will learn how modifiers work, how comparison changes form, how quantity depends on noun type, and how exam distractors try to confuse similar structures.</p>
+<div class="chips"><span class="chip">adjectives</span><span class="chip">adverbs</span><span class="chip">prefixes</span><span class="chip">frequency</span><span class="chip">comparatives</span><span class="chip">superlatives</span><span class="chip">quantifiers</span><span class="chip">too / enough / so / such</span></div></div>
+<div class="note">Identify the function.<br>Read the context.<br><b>Then choose.</b></div></div></header>
+<section id="overview"><div class="wrap"><h2 class="section-title">What you are covering this week</h2><div class="underline"></div>
+<p class="lead">Week 4 focuses on description, comparison and quantity. These areas are connected: adjective/adverb choice depends on function, comparison depends on adjective form, and quantifiers depend on whether a noun is countable or noncount.</p>
+<div class="grid4"><div class="card skyc metric"><strong>8</strong>core grammar areas</div><div class="card mintc metric"><strong>36</strong>guided practice items</div><div class="card yellowc metric"><strong>15</strong>cumulative timed questions</div><div class="card pinkc metric"><strong>1</strong>error log</div></div>
+<div class="topic-index"><div>1 · Adjectives vs Adverbs</div><div>2 · Adjective Prefixes</div><div>3 · Adverbs of Frequency</div><div>4 · Adverbs of Manner</div><div>5 · Comparatives</div><div>6 · Superlatives</div><div>7 · Quantifiers</div><div>8 · too / enough / so / such</div><div>Exam strategy · Meaning before form</div></div>
+<div class="bookref"><span class="badge">MAIN RESOURCE</span><span>This HTML contains the full explanation for Week 4. Grammar in Use is now optional extra practice.</span></div>
+</div></section>
+<section class="white" id="grammar"><div class="wrap">
+
+<h2 class="section-title">1 · Adjectives vs Adverbs</h2><div class="underline"></div>
+<div class="rule-card"><h3>What does the word describe?</h3><p>An <b>adjective</b> describes a noun, pronoun or state. An <b>adverb</b> usually describes a verb — how an action happens.</p><div class="structure">ADJECTIVE → noun / state</div><div class="structure">ADVERB → action</div></div>
+<div class="grid2"><div class="card skyc"><h3>Adjective</h3><div class="example">She is <b>careful</b>.</div><div class="example">It looks <b>difficult</b>.</div><p>Common after <b>be, seem, look, feel, sound, become</b>.</p></div><div class="card mintc"><h3>Adverb</h3><div class="example">She works <b>carefully</b>.</div><div class="example">He answered <b>quickly</b>.</div><p>It tells you how the action happens.</p></div></div>
+<div class="rule-card"><h3>Same idea, different job</h3><p>Many adjective/adverb pairs come from the same word family. The form changes because the function changes.</p>
+<div class="extra-examples"><div class="extra-example"><b>quiet → quietly</b><br>The room is quiet.<br>They worked quietly.</div><div class="extra-example"><b>patient → patiently</b><br>The teacher is patient.<br>She explained it patiently.</div><div class="extra-example"><b>successful → successfully</b><br>The project was successful.<br>They completed it successfully.</div></div>
+<p>Remember that an adjective can also come <b>before a noun</b>: <i>a difficult question</i>, <i>an efficient system</i>. An adverb usually cannot replace it there.</p></div>
+<div class="trap">Exam trap: After linking verbs, you often need an adjective: <i>She looks tired</i>, not <i>tiredly</i>.</div><div class="check">Find the word being described. Noun/state → adjective. Action → adverb.</div>
+<div class="quick-practice" id="quick-adjadv">
+<h3>Quick Practice · Adjectives vs Adverbs</h3>
+<p>3 short questions before moving to the next topic. You get immediate feedback.</p>
+<div id="quick-adjadv-qs"></div>
+</div>
+
+
+<h2 class="section-title" style="margin-top:42px">2 · Adjectives with Prefixes</h2><div class="underline"></div>
+<div class="rule-card"><h3>Prefixes often create an opposite or negative meaning.</h3><p>There is no single universal negative prefix, so learn common adjective families and let meaning guide you.</p></div>
+<div class="prefix-grid"><div class="prefix"><strong>un-</strong>happy → unhappy<br>usual → unusual</div><div class="prefix"><strong>in-</strong>correct → incorrect<br>complete → incomplete</div><div class="prefix"><strong>im-</strong>possible → impossible<br>patient → impatient</div><div class="prefix"><strong>ir- / il-</strong>regular → irregular<br>legal → illegal</div><div class="prefix"><strong>dis-</strong>honest → dishonest<br>organized → disorganized</div><div class="prefix"><strong>non-</strong>essential → nonessential</div><div class="prefix"><strong>mis-</strong>leading → misleading</div><div class="prefix"><strong>over-</strong>confident → overconfident</div></div>
+<div class="rule-card"><h3>Build word families, not isolated words</h3><p>Prefixes are especially useful in multiple-choice questions because one option may have the right base adjective but the wrong prefix. Learning common families helps you eliminate impossible forms quickly.</p>
+<div class="extra-examples"><div class="extra-example"><b>regular → irregular</b><br>The schedule is irregular.</div><div class="extra-example"><b>patient → impatient</b><br>He became impatient.</div><div class="extra-example"><b>honest → dishonest</b><br>The report was dishonest.</div></div>
+<p>Some prefixes can also add a different idea rather than simple negation: <b>overconfident</b> means too confident; <b>misleading</b> means giving the wrong impression.</p></div>
+<div class="trap">Do not invent forms such as <i>unpossible</i>, <i>inhonest</i> or <i>discorrect</i>.</div>
+<div class="quick-practice" id="quick-prefixes">
+<h3>Quick Practice · Adjective Prefixes</h3>
+<p>3 short questions before moving to the next topic. You get immediate feedback.</p>
+<div id="quick-prefixes-qs"></div>
+</div>
+
+
+<h2 class="section-title" style="margin-top:42px">3 · Adverbs of Frequency</h2><div class="underline"></div>
+<div class="rule-card"><h3>Frequency tells you how often something happens.</h3><p>These adverbs often appear with the Simple Present because they describe habits and routines.</p></div>
+<div class="scale"><div>always<br><small>≈100%</small></div><div>usually<br><small>≈80–90%</small></div><div>often<br><small>≈60–70%</small></div><div>sometimes<br><small>≈40–50%</small></div><div>hardly ever<br><small>≈5–10%</small></div><div>never<br><small>0%</small></div></div>
+<div class="grid2"><div class="card skyc"><h3>With most verbs</h3><div class="formula">subject + frequency adverb + main verb</div><div class="example">I <b>usually review</b> my answers.</div></div><div class="card mintc"><h3>With be</h3><div class="formula">subject + be + frequency adverb</div><div class="example">She <b>is often</b> tired.</div></div></div>
+<div class="rule-card"><h3>Frequency expressions</h3><p><b>once a week, twice a month, every day, from time to time</b> often come at the end.</p><div class="example">I review vocabulary <b>twice a week</b>.</div></div>
+<div class="rule-card"><h3>Position can change with sentence structure</h3><p>With ordinary verbs, put the frequency adverb before the main verb. With <b>be</b>, put it after <b>be</b>. In questions, the adverb normally appears after the subject.</p>
+<div class="extra-examples"><div class="extra-example"><b>Ordinary verb</b><br>They often travel for work.</div><div class="extra-example"><b>Verb be</b><br>He is rarely late.</div><div class="extra-example"><b>Question</b><br>Do you usually study at night?</div></div>
+<p><b>Sometimes</b> can also appear at the beginning or end for emphasis: <i>Sometimes I study at night.</i></p></div>
+<div class="quick-practice" id="quick-frequency">
+<h3>Quick Practice · Adverbs of Frequency</h3>
+<p>3 short questions before moving to the next topic. You get immediate feedback.</p>
+<div id="quick-frequency-qs"></div>
+</div>
+
+
+<h2 class="section-title" style="margin-top:42px">4 · Adverbs of Manner</h2><div class="underline"></div>
+<div class="rule-card"><h3>They answer “How?”</h3><p>Many use <b>adjective + -ly</b>, but spelling changes and irregular forms matter.</p></div>
+<table class="compare"><tr><th>Adjective</th><th>Adverb</th><th>Example</th></tr><tr><td>careful</td><td>carefully</td><td>She checked carefully.</td></tr><tr><td>easy</td><td>easily</td><td>He completed it easily.</td></tr><tr><td>automatic</td><td>automatically</td><td>The system updates automatically.</td></tr><tr><td>good</td><td>well</td><td>She speaks English well.</td></tr><tr><td>fast</td><td>fast</td><td>He works fast.</td></tr><tr><td>hard</td><td>hard</td><td>They study hard.</td></tr></table>
+<div class="rule-card"><h3>Placement of manner adverbs</h3><p>A manner adverb often comes after the verb or after the object of the verb. Avoid separating a verb from its object unnecessarily.</p>
+<div class="extra-examples"><div class="extra-example"><b>After the verb</b><br>She smiled politely.</div><div class="extra-example"><b>After the object</b><br>He answered the question confidently.</div><div class="extra-example"><b>With emphasis</b><br>She carefully checked the form.</div></div>
+<p>Some words have the same adjective and adverb form, such as <b>fast</b>, <b>hard</b>, <b>early</b> and <b>late</b>.</p></div>
+<div class="trap"><b>hard ≠ hardly.</b> “He works hard” = with effort. “He hardly works” = he almost does not work.</div>
+<div class="quick-practice" id="quick-manner">
+<h3>Quick Practice · Adverbs of Manner</h3>
+<p>3 short questions before moving to the next topic. You get immediate feedback.</p>
+<div id="quick-manner-qs"></div>
+</div>
+
+
+<h2 class="section-title" style="margin-top:42px">5 · Comparatives</h2><div class="underline"></div>
+<div class="rule-card"><h3>Use comparatives to compare two.</h3><p>The form depends mainly on adjective length and spelling.</p></div>
+<table class="compare"><tr><th>Type</th><th>Pattern</th><th>Example</th></tr><tr><td>Short adjective</td><td>-er + than</td><td>smaller than</td></tr><tr><td>Ends in -y</td><td>y → i + -er</td><td>easier than</td></tr><tr><td>CVC spelling</td><td>double consonant + -er</td><td>bigger than</td></tr><tr><td>Long adjective</td><td>more + adjective + than</td><td>more difficult than</td></tr><tr><td>Irregular</td><td>special form</td><td>better · worse</td></tr></table>
+<div class="rule-card"><h3>Comparatives can also show degree</h3><p>Words such as <b>much, a lot, far, a little</b> can modify a comparative and show how big the difference is.</p>
+<div class="extra-examples"><div class="extra-example">This option is <b>much cheaper</b>.</div><div class="extra-example">The new system is <b>a little faster</b>.</div><div class="extra-example">The second text is <b>far more difficult</b>.</div></div>
+<p>You can also express equality with <b>as + adjective + as</b>: <i>This test is as difficult as the previous one.</i> For inequality: <i>not as ... as</i>.</p></div>
+<div class="trap">Avoid double comparatives: <i>more easier</i> ✗ / <i>more better</i> ✗.</div><div class="keyidea">The word <b>than</b> is a strong comparative clue.</div>
+<div class="quick-practice" id="quick-comparatives">
+<h3>Quick Practice · Comparatives</h3>
+<p>3 short questions before moving to the next topic. You get immediate feedback.</p>
+<div id="quick-comparatives-qs"></div>
+</div>
+
+
+<h2 class="section-title" style="margin-top:42px">6 · Superlatives</h2><div class="underline"></div>
+<div class="rule-card"><h3>Use superlatives for one item at the highest or lowest degree in a group.</h3><p>Comparative = two. Superlative = one item compared with the whole group.</p></div>
+<table class="compare"><tr><th>Type</th><th>Pattern</th><th>Example</th></tr><tr><td>Short adjective</td><td>the + -est</td><td>the fastest</td></tr><tr><td>Ends in -y</td><td>y → i + -est</td><td>the easiest</td></tr><tr><td>Long adjective</td><td>the most + adjective</td><td>the most interesting</td></tr><tr><td>Irregular</td><td>special form</td><td>the best · the worst</td></tr></table>
+<div class="rule-card"><h3>Notice the group or range</h3><p>A superlative normally identifies one item inside a larger group. The group may be explicit or understood from context.</p>
+<div class="extra-examples"><div class="extra-example">She is <b>the youngest</b> person on the team.</div><div class="extra-example">This is <b>the most useful</b> section in the guide.</div><div class="extra-example">It was <b>the worst</b> answer of the three.</div></div>
+<p>A very common exam pattern is <b>one of the + superlative + plural noun</b>: <i>one of the most important topics</i>.</p></div>
+<div class="check">Group clues: <b>of the three, in the class, I have ever seen</b>.</div>
+<div class="quick-practice" id="quick-superlatives">
+<h3>Quick Practice · Superlatives</h3>
+<p>3 short questions before moving to the next topic. You get immediate feedback.</p>
+<div id="quick-superlatives-qs"></div>
+</div>
+
+
+<h2 class="section-title" style="margin-top:42px">7 · Quantifiers</h2><div class="underline"></div>
+<div class="rule-card"><h3>Start with noun type.</h3><p>First decide whether the noun is <b>countable plural</b> or <b>noncount</b>. Then decide whether the meaning is large quantity, some quantity or almost none.</p></div>
+<table class="compare"><tr><th>Quantifier</th><th>Count plural</th><th>Noncount</th><th>Meaning</th></tr><tr><td>many</td><td>✓</td><td>—</td><td>large number</td></tr><tr><td>much</td><td>—</td><td>✓</td><td>large amount</td></tr><tr><td>a few</td><td>✓</td><td>—</td><td>some, positive</td></tr><tr><td>few</td><td>✓</td><td>—</td><td>almost none</td></tr><tr><td>a little</td><td>—</td><td>✓</td><td>some, positive</td></tr><tr><td>little</td><td>—</td><td>✓</td><td>almost none</td></tr><tr><td>a lot of</td><td>✓</td><td>✓</td><td>large quantity</td></tr><tr><td>some / any</td><td>✓</td><td>✓</td><td>indefinite quantity</td></tr></table>
+<div class="quant-grid"><div class="quant-box"><h3>many vs much</h3><div class="example">many questions</div><div class="example">much time</div></div><div class="quant-box"><h3>a few vs few</h3><div class="example">a few friends = some</div><div class="example">few friends = almost none</div></div><div class="quant-box"><h3>a little vs little</h3><div class="example">a little time = some</div><div class="example">little time = almost none</div></div><div class="quant-box"><h3>some vs any</h3><div class="example">some questions</div><div class="example">any questions?</div></div></div>
+<div class="rule-card"><h3>Meaning matters as much as noun type</h3><p><b>A few</b> and <b>a little</b> mean “some” and usually sound positive or sufficient. <b>Few</b> and <b>little</b> emphasize that the quantity is very small and often insufficient.</p>
+<div class="extra-examples"><div class="extra-example"><b>a few</b><br>We have a few options, so we can choose.</div><div class="extra-example"><b>few</b><br>We have few options, so the situation is difficult.</div><div class="extra-example"><b>a little / little</b><br>There is a little time left. / There is little time left.</div></div>
+<p><b>Much</b> and <b>many</b> are especially common in negatives and questions. In affirmative conversational English, <b>a lot of</b> is often more natural: <i>We have a lot of work.</i></p></div>
+<div class="keyidea">Exam strategy: noun type → sentence type → meaning.</div>
+<div class="quick-practice" id="quick-quantifiers">
+<h3>Quick Practice · Quantifiers</h3>
+<p>3 short questions before moving to the next topic. You get immediate feedback.</p>
+<div id="quick-quantifiers-qs"></div>
+</div>
+
+
+<h2 class="section-title" style="margin-top:42px">8 · too / enough / so / such</h2><div class="underline"></div>
+<div class="rule-card"><h3>Learn the pattern, not only the translation.</h3><p>These forms are often tested together because they appear around adjectives and nouns but use different word order.</p></div>
+<table class="compare"><tr><th>Structure</th><th>Use</th><th>Example</th></tr><tr><td>too + adjective</td><td>excess / problem</td><td>too heavy</td></tr><tr><td>adjective + enough</td><td>sufficient degree</td><td>big enough</td></tr><tr><td>enough + noun</td><td>sufficient quantity</td><td>enough time</td></tr><tr><td>so + adjective/adverb + that</td><td>degree + result</td><td>so difficult that...</td></tr><tr><td>such + (a/an) + adjective + noun + that</td><td>noun phrase + result</td><td>such a difficult test that...</td></tr><tr><td>so many / so much + noun</td><td>high quantity</td><td>so many people</td></tr></table>
+<div class="rule-card"><h3>Compare the meaning carefully</h3><p><b>Too</b> usually expresses a problem or excess. <b>Enough</b> expresses sufficiency. <b>So</b> and <b>such</b> emphasize degree, often followed by a result clause with <b>that</b>.</p>
+<div class="extra-examples"><div class="extra-example"><b>too</b><br>The room is too small for the group.</div><div class="extra-example"><b>enough</b><br>The room is large enough for the group.</div><div class="extra-example"><b>so / such</b><br>It was so useful that I saved it.<br>It was such a useful guide that I saved it.</div></div>
+<p>Also notice <b>too much + noncount noun</b> and <b>too many + plural count noun</b>: <i>too much traffic</i>, <i>too many questions</i>.</p></div>
+<div class="trap">Word order matters: <b>adjective + enough</b> but <b>enough + noun</b>.</div><div class="check">Only adjective? Think <b>so</b>. Adjective + noun phrase? Check <b>such</b>.</div>
+<div class="quick-practice" id="quick-intensifiers">
+<h3>Quick Practice · too / enough / so / such</h3>
+<p>3 short questions before moving to the next topic. You get immediate feedback.</p>
+<div id="quick-intensifiers-qs"></div>
+</div>
+
+
+</div></section>
+<section class="sky"><div class="wrap"><h2 class="section-title">Vocabulary & exam context</h2><div class="underline"></div><p class="lead">Use the grammar with descriptive vocabulary from common exam fields.</p>
+<div class="vocab"><span>reliable</span><span>responsible</span><span>crowded</span><span>efficient</span><span>expensive</span><span>affordable</span><span>healthy</span><span>dangerous</span><span>convenient</span><span>unusual</span><span>impatient</span><span>disorganized</span><span>carefully</span><span>frequently</span><span>efficiently</span></div>
+<div class="context-grid"><div class="context"><strong>WORK</strong>This system is more efficient than the old one, but there isn't enough time to train everyone today.</div><div class="context"><strong>TRAVEL</strong>The city center is usually more crowded than this neighborhood.</div><div class="context"><strong>PEOPLE</strong>She is extremely reliable and always completes her work carefully.</div></div></div></section>
+
+<section class="white" id="practice"><div class="wrap"><h2 class="section-title">Practice Lab</h2><div class="underline"></div><p class="lead">Six focused blocks. Each answer locks after one selection and explains why the correct form works.</p>
+<div class="assess-grid"><aside class="side">
+<button class="active" data-panel="adjadv">Adjectives & Adverbs<small>6 questions</small></button>
+<button data-panel="prefixes">Prefixes<small>6 questions</small></button>
+<button data-panel="comparison">Comparison<small>6 questions</small></button>
+<button data-panel="frequency">Frequency<small>6 questions</small></button>
+<button data-panel="quantifiers">Quantifiers<small>6 questions</small></button>
+<button data-panel="intensifiers">too / enough / so / such<small>6 questions</small></button>
+</aside><main>
+<div class="panel active" id="panel-adjadv"><div class="scorebox"><strong><span id="sadjadv">0</span>/6</strong><div class="mini-progress"><div class="mini-fill" id="fadjadv"></div></div></div><div id="adjAdvQs"></div></div>
+<div class="panel" id="panel-prefixes"><div class="scorebox"><strong><span id="sprefixes">0</span>/6</strong><div class="mini-progress"><div class="mini-fill" id="fprefixes"></div></div></div><div id="prefixQs"></div></div>
+<div class="panel" id="panel-comparison"><div class="scorebox"><strong><span id="scomparison">0</span>/6</strong><div class="mini-progress"><div class="mini-fill" id="fcomparison"></div></div></div><div id="comparisonQs"></div></div>
+<div class="panel" id="panel-frequency"><div class="scorebox"><strong><span id="sfrequency">0</span>/6</strong><div class="mini-progress"><div class="mini-fill" id="ffrequency"></div></div></div><div id="frequencyQs"></div></div>
+<div class="panel" id="panel-quantifiers"><div class="scorebox"><strong><span id="squantifiers">0</span>/6</strong><div class="mini-progress"><div class="mini-fill" id="fquantifiers"></div></div></div><div id="quantifierQs"></div></div>
+<div class="panel" id="panel-intensifiers"><div class="scorebox"><strong><span id="sintensifiers">0</span>/6</strong><div class="mini-progress"><div class="mini-fill" id="fintensifiers"></div></div></div><div id="intensifierQs"></div></div>
+</main></div></div></section>
+
+<section class="mint" id="timed"><div class="wrap"><h2 class="section-title">Timed Cumulative Block</h2><div class="underline"></div>
+<p class="lead">Fifteen verified questions combining Weeks 1–4. Correct-answer positions vary across A, B, C and D. Suggested target: 10 minutes.</p>
+<div class="timer"><strong id="clock">10:00</strong><button class="btn primary" id="startTimer">Start timer</button><button class="btn secondary" id="resetTimer">Reset</button><span id="timerMsg"></span></div>
+<div class="scorebox"><strong><span id="stimed">0</span>/15</strong><div class="mini-progress"><div class="mini-fill" id="ftimed"></div></div><span id="timedDone">0 answered</span></div><div id="timedQs"></div><div id="timedResult" class="card yellowc" style="display:none;margin-top:14px"></div></div></section>
+
+<section class="white"><div class="wrap"><h2 class="section-title">Error Log</h2><div class="underline"></div><p class="lead">Classify each error by grammar function, not only by the correct answer.</p>
+<table class="errorlog"><tr><th>Item / sentence</th><th>My answer</th><th>Correct idea</th><th>Why I missed it</th></tr><tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr><tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr><tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr><tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr></table></div></section>
+
+<section class="mint" id="gamezone"><div class="wrap"><h2 class="section-title">Game Zone</h2><div class="underline"></div><p class="lead">Two quick activities to reinforce grammar function and meaning.</p>
+<div style="display:grid;grid-template-columns:1fr;gap:16px"><div class="card"><h3>Game 1 · Function Match</h3><p>Match each form with its grammar function.</p><div class="grid2" id="matchGrid" style="margin-top:14px"></div><div class="scorebox" style="margin-top:14px"><strong><span id="matchScore">0</span>/10</strong><div class="mini-progress"><div class="mini-fill" id="matchFill"></div></div></div><button class="btn secondary" id="resetMatch">Restart Game 1</button></div>
+<div class="card"><h3>Game 2 · Meaning Memory</h3><p>Find the six matching pairs.</p><div id="memoryGrid" class="memory-grid" style="margin-top:14px"></div><div class="scorebox" style="margin-top:14px"><strong><span id="memoryScore">0</span>/10</strong><div class="mini-progress"><div class="mini-fill" id="memoryFill"></div></div></div><button class="btn secondary" id="resetMemory">Restart Game 2</button></div></div></div></section>
+
+<section class="sky" id="homework"><div class="wrap"><h2 class="section-title">Homework & independent review</h2><div class="underline"></div>
+<div class="grid2"><div class="card mintc"><h3>Main resource review</h3><p>Use this HTML as your main Week 4 reference. Re-read any section linked to a Practice Lab score below 80%, then create one correct example and one exam-style distractor for that rule.</p></div><div class="card yellowc"><h3>Optional book reinforcement</h3><p>Use Grammar in Use only if you want more repetition after the concept is clear. The HTML contains the main explanation, examples and exam strategy for every Week 4 topic.</p></div></div>
+<div class="review-note"><b>Exam habit:</b> Before choosing an answer, identify the grammar function first: adjective or adverb? two or group? count or noncount? enough degree or excessive degree?</div>
+<div class="callout" style="margin-top:16px"><h3>Session 4 outcome</h3><p class="hand">Use modifiers, comparison and quantifiers with greater precision.</p><p>Next session: Modal verbs and functional meaning.</p></div></div></section>
+<footer class="footer"><strong>English with Mr. Rengifo</strong><div>Álvaro · Exam Preparation · Session 4 · Complete Resource · American English</div></footer>
+
+<script>
+const sets={"adjadv":[{"q":"She is a very ___ manager.","o":["carefully","careful","care","more carefully"],"a":1,"e":"After be, use an adjective to describe the noun: careful."},{"q":"He explained the procedure ___.","o":["clear","clearly","clearness","clearest"],"a":1,"e":"The word describes how he explained, so use the adverb clearly."},{"q":"The instructions were ___ written.","o":["clear","clearly","clearest","clarity"],"a":1,"e":"Written is modified by an adverb: clearly written."},{"q":"You look ___. Are you OK?","o":["tiredly","tired","tiringly","more tiredly"],"a":1,"e":"After the linking verb look, use an adjective: tired."},{"q":"Which sentence is correct?","o":["She speaks English fluent.","She fluent speaks English.","She speaks English fluently.","She fluently English speaks."],"a":2,"e":"Fluently is an adverb describing speaks."},{"q":"The test was surprisingly ___.","o":["easily","ease","easy","easiest"],"a":2,"e":"After be, the complement is an adjective: easy."}],"prefixes":[{"q":"The opposite of 'possible' is ___.","o":["unpossible","impossible","dispossible","inpossible"],"a":1,"e":"The standard negative form is impossible."},{"q":"If information is not correct, it is ___.","o":["incorrect","uncorrect","discorrect","imcorrect"],"a":0,"e":"Incorrect is the standard negative form."},{"q":"A person who is not honest is ___.","o":["unhonest","inhonest","dishonest","imhonest"],"a":2,"e":"Dishonest is the correct adjective."},{"q":"Which word means 'not usual'?","o":["inusual","disusual","unusual","imusual"],"a":2,"e":"Unusual means not usual."},{"q":"A poorly arranged schedule may be described as ___.","o":["disorganized","inorganized","unorganizedly","imorganized"],"a":0,"e":"Disorganized is the standard adjective."},{"q":"Which form is correct?","o":["irresponsible","unresponsible","disresponsible","inresponsible"],"a":0,"e":"Irresponsible is the standard negative adjective."}],"comparison":[{"q":"This exercise is ___ than the previous one.","o":["difficult","more difficult","most difficult","the more difficult"],"a":1,"e":"Long adjectives normally use more + adjective + than."},{"q":"My new office is ___ than the old one.","o":["big","bigger","biggest","more big"],"a":1,"e":"Short adjective: big → bigger."},{"q":"This is the ___ option for the project.","o":["better","best","most good","more good"],"a":1,"e":"The irregular superlative of good is the best."},{"q":"Lima is ___ than this small town.","o":["busier","busiest","more busy","the busiest"],"a":0,"e":"Busy → busier in the comparative."},{"q":"That was the ___ presentation of the three.","o":["more interesting","interesting","most interesting","interestinger"],"a":2,"e":"Use the superlative because one item is compared with a group of three."},{"q":"Which sentence is correct?","o":["This test is more easier than the first.","This test is easier than the first.","This test is easiest than the first.","This test is the easier than the first."],"a":1,"e":"Do not use double comparatives. Easier than is correct."}],"frequency":[{"q":"I ___ review my answers before submitting. (about 100%)","o":["never","sometimes","always","hardly ever"],"a":2,"e":"Always expresses approximately 100% frequency."},{"q":"She is ___ late for class. (0%)","o":["usually","never","often","always"],"a":1,"e":"Never expresses 0% frequency."},{"q":"Which sentence is correct?","o":["I go usually to class early.","Usually I am go early.","I usually go to class early.","I go to class usually early."],"a":2,"e":"Frequency adverbs usually come before the main verb."},{"q":"With the verb be, which is natural?","o":["She usually is tired.","She is usually tired.","She tired is usually.","Usually she tired is."],"a":1,"e":"With be, the frequency adverb normally comes after the verb."},{"q":"He ___ checks his email; maybe once every few weeks.","o":["always","usually","hardly ever","often"],"a":2,"e":"Hardly ever means very infrequently."},{"q":"They go to the gym ___.","o":["twice a week","twice week","two times a week always","a twice week"],"a":0,"e":"Frequency expressions such as twice a week usually come at the end."}],"quantifiers":[{"q":"There aren't ___ chairs in the room.","o":["much","many","a little","little"],"a":1,"e":"Use many with plural count nouns."},{"q":"We don't have ___ time.","o":["many","few","much","a few"],"a":2,"e":"Use much with noncount nouns in negatives and questions."},{"q":"I have ___ close friends here, so I don't feel alone.","o":["few","a few","little","a little"],"a":1,"e":"A few means some and has a positive meaning with plural count nouns."},{"q":"There is ___ milk left — enough for one coffee.","o":["few","a few","little","a little"],"a":3,"e":"A little means some and has a positive meaning with noncount nouns."},{"q":"We have ___ work to do today.","o":["a lot of","many","a few","few"],"a":0,"e":"A lot of works with noncount nouns such as work."},{"q":"Do you have ___ questions?","o":["some","any","much","a little"],"a":1,"e":"Any is common in general questions with plural count nouns."}],"intensifiers":[{"q":"The box is ___ heavy for me to lift.","o":["enough","too","so that","such"],"a":1,"e":"Too + adjective means more than is acceptable or possible."},{"q":"The room isn't quiet ___.","o":["too","so","enough","such"],"a":2,"e":"Enough follows an adjective: quiet enough."},{"q":"It was ___ difficult exam that many students complained.","o":["so","such a","too","enough"],"a":1,"e":"Use such a + adjective + singular count noun."},{"q":"The exam was ___ difficult that many students complained.","o":["such","enough","too","so"],"a":3,"e":"Use so + adjective + that."},{"q":"There were ___ many people that we couldn't enter.","o":["such","so","enough","too"],"a":1,"e":"Use so many + plural count noun."},{"q":"We don't have ___ time to finish.","o":["too","enough","such","so"],"a":1,"e":"Use enough before a noun: enough time."}],"timed":[{"q":"My sister usually ___ to work by bus.","o":["goes","is going","went","has gone"],"a":0,"e":"Usually signals a routine, so use Simple Present: goes."},{"q":"At 8:00 last night, I ___ for the exam.","o":["studied","was studying","have studied","study"],"a":1,"e":"A past action in progress at a specific time uses Past Continuous."},{"q":"I have known her ___ 2021.","o":["for","yet","since","already"],"a":2,"e":"2021 is a starting point, so use since."},{"q":"Have you finished the exercise ___?","o":["already","for","since","yet"],"a":3,"e":"Yet is natural at the end of Present Perfect questions."},{"q":"The teacher spoke to Ana and ___.","o":["me","I","my","mine"],"a":0,"e":"After to, use the object pronoun me."},{"q":"This laptop is ___.","o":["my","me","I","mine"],"a":3,"e":"Mine is a possessive pronoun and stands alone."},{"q":"We need ___ information before we decide.","o":["many","an","some","a few"],"a":2,"e":"Information is noncount; some information is correct."},{"q":"There ___ two new students in the class.","o":["is","are","be","has"],"a":1,"e":"Plural noun phrase: There are two new students."},{"q":"She explained the answer very ___.","o":["clear","clearly","clearest","clarity"],"a":1,"e":"The adverb clearly modifies explained."},{"q":"This exercise is ___ than the previous one.","o":["easier","easiest","more easy","the easiest"],"a":0,"e":"The comparative of easy is easier."},{"q":"That was the ___ part of the test.","o":["more difficult","difficult","most difficult","more difficulty"],"a":2,"e":"Use the superlative: the most difficult."},{"q":"There isn't ___ water left.","o":["many","a few","few","much"],"a":3,"e":"Water is noncount, so much is correct in a negative sentence."},{"q":"I have ___ friends in this city, so I can ask them for help.","o":["a few","few","little","a little"],"a":0,"e":"A few means some and is positive with count nouns."},{"q":"The instructions were ___ confusing that I read them twice.","o":["such","so","enough","too"],"a":1,"e":"Use so + adjective + that: so confusing that..."},{"q":"The room isn't large ___ for twenty people.","o":["too","so","enough","such"],"a":2,"e":"Enough follows the adjective: large enough."}]};
+const state={adjadv:[],prefixes:[],comparison:[],frequency:[],quantifiers:[],intensifiers:[],timed:[]},scores={adjadv:0,prefixes:0,comparison:0,frequency:0,quantifiers:0,intensifiers:0,timed:0};
+function renderSet(name,container){const root=document.getElementById(container);root.innerHTML="";state[name]=sets[name].map(()=>false);scores[name]=0;updateScore(name);sets[name].forEach((x,i)=>{const el=document.createElement("div");el.className="qcard";el.innerHTML=`<div class="qnum">${name==="timed"?"Timed item":"Question"} ${i+1}</div><div class="qtext">${x.q}</div><div class="options">${x.o.map((v,j)=>`<button class="option" data-set="${name}" data-i="${i}" data-o="${j}">${v}</button>`).join("")}</div><div class="feedback" id="fb-${name}-${i}"></div>`;root.appendChild(el)});root.querySelectorAll(".option").forEach(b=>b.addEventListener("click",()=>answer(b.dataset.set,+b.dataset.i,+b.dataset.o)))}
+let timedFinished=false;
+function answer(name,i,j){if(state[name][i])return;state[name][i]=true;const x=sets[name][i],btns=[...document.querySelectorAll(`[data-set="${name}"][data-i="${i}"]`)];btns.forEach(b=>b.disabled=true);const fb=document.getElementById(`fb-${name}-${i}`);if(j===x.a){scores[name]++;btns[j].classList.add("correct");fb.className="feedback show good";fb.textContent="Correct. "+x.e}else{btns[j].classList.add("wrong");btns[x.a].classList.add("correct");fb.className="feedback show bad";fb.textContent="Review. "+x.e}updateScore(name);if(name==="timed"&&state.timed.filter(Boolean).length===sets.timed.length&&!timedFinished)finishTimedBlock()}
+function updateScore(name){const total=sets[name].length,done=state[name]?.filter(Boolean).length||0;const s=document.getElementById("s"+name),f=document.getElementById("f"+name);if(s)s.textContent=scores[name];if(f)f.style.width=(done/total*100)+"%";if(name==="timed")document.getElementById("timedDone").textContent=`${done} answered`}
+document.querySelectorAll(".side button").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".side button").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));btn.classList.add("active");document.getElementById("panel-"+btn.dataset.panel).classList.add("active")}));
+
+const miniSets={"adjadv":[{"q":"The soup tastes ___.","o":["good","well","goodly","betterly"],"a":0,"e":"Taste is a linking verb here, so use the adjective good."},{"q":"She completed the task ___.","o":["accurate","accurately","accuracy","more accurate"],"a":1,"e":"The word describes how she completed the task, so accurately is correct."},{"q":"He is a very ___ employee.","o":["reliably","reliability","reliable","rely"],"a":2,"e":"After be and before the noun employee, use the adjective reliable."}],"prefixes":[{"q":"If something is not legal, it is ___.","o":["unlegal","illegal","dislegal","imlegal"],"a":1,"e":"Illegal is the standard opposite of legal."},{"q":"Someone who does not act responsibly may be ___.","o":["unresponsible","disresponsible","irresponsible","inresponsible"],"a":2,"e":"Irresponsible is the correct adjective."},{"q":"A person who is not honest is ___.","o":["unhonest","inhonest","imhonest","dishonest"],"a":3,"e":"Dishonest is the standard negative adjective."}],"frequency":[{"q":"I ___ check my answers before submitting. (about 100%)","o":["never","sometimes","always","hardly ever"],"a":2,"e":"Always expresses approximately 100% frequency."},{"q":"Which sentence is correct?","o":["She usually tired is.","She usually is tired.","Usually she tired is.","She is usually tired."],"a":3,"e":"With be, the frequency adverb normally follows the verb: is usually."},{"q":"We have a review class ___.","o":["twice a week","twice week","two a week","week twice"],"a":0,"e":"Twice a week is the correct frequency expression."}],"manner":[{"q":"He answered the question ___.","o":["confident","confidence","more confident","confidently"],"a":3,"e":"Confidently is an adverb describing how he answered."},{"q":"She speaks English very ___.","o":["well","good","goodly","best"],"a":0,"e":"Well is the irregular adverb of good."},{"q":"They worked ___ to finish on time.","o":["hardly","hard","harderly","hardly enough"],"a":1,"e":"Work hard means work with effort. Hardly means almost not."}],"comparatives":[{"q":"My new apartment is ___ than the old one.","o":["larger","largest","more large","the large"],"a":0,"e":"Large is a short adjective: larger than."},{"q":"This laptop is ___ than that one.","o":["expensiver","more expensive","most expensive","the expensive"],"a":1,"e":"Long adjective: more expensive than."},{"q":"Her result is ___ than mine.","o":["good","best","better","more good"],"a":2,"e":"Good has the irregular comparative better."}],"superlatives":[{"q":"Which is correct?","o":["the more fast","the fastest","the faster","most fast"],"a":1,"e":"For a short adjective, use the + -est: the fastest."},{"q":"This is the ___ result we have had this year.","o":["better","good","best","more good"],"a":2,"e":"The superlative of good is the best."},{"q":"It was the ___ presentation of the day.","o":["interestingest","more interesting","interesting","most interesting"],"a":3,"e":"Long adjective: the most interesting."}],"quantifiers":[{"q":"How ___ emails did you receive?","o":["much","a little","many","little"],"a":2,"e":"Emails is a plural count noun, so use many."},{"q":"There is ___ water left — enough for one glass.","o":["few","many","little","a little"],"a":3,"e":"A little means some and is used with noncount nouns."},{"q":"We have ___ options, so choosing is difficult.","o":["few","a few","a little","much"],"a":0,"e":"Few + plural count noun emphasizes almost none."}],"intensifiers":[{"q":"The bag is ___ heavy for me to carry.","o":["enough","so that","such","too"],"a":3,"e":"Too + adjective expresses excess: too heavy."},{"q":"Do we have ___ chairs for everyone?","o":["enough","too","so","such"],"a":0,"e":"Enough comes before a noun: enough chairs."},{"q":"The instructions were ___ confusing that I asked for help.","o":["such","so","enough","too"],"a":1,"e":"Use so + adjective + that: so confusing that..."}]};
+const miniState={};
+function renderMini(name){
+ const root=document.getElementById(`quick-${name}-qs`);
+ if(!root)return;
+ miniState[name]=miniSets[name].map(()=>false);
+ root.innerHTML="";
+ miniSets[name].forEach((x,i)=>{
+   const card=document.createElement("div");
+   card.className="quick-q";
+   card.innerHTML=`<div class="quick-text">${i+1}. ${x.q}</div><div class="quick-options">${x.o.map((v,j)=>`<button data-mini="${name}" data-i="${i}" data-o="${j}">${String.fromCharCode(65+j)}. ${v}</button>`).join("")}</div><div class="quick-feedback" id="qfb-${name}-${i}"></div>`;
+   root.appendChild(card);
+ });
+ root.querySelectorAll("[data-mini]").forEach(b=>b.addEventListener("click",()=>answerMini(b.dataset.mini,+b.dataset.i,+b.dataset.o)));
+}
+function answerMini(name,i,j){
+ if(miniState[name][i])return;
+ miniState[name][i]=true;
+ const x=miniSets[name][i];
+ const btns=[...document.querySelectorAll(`[data-mini="${name}"][data-i="${i}"]`)];
+ btns.forEach(b=>b.disabled=true);
+ const fb=document.getElementById(`qfb-${name}-${i}`);
+ if(j===x.a){
+   btns[j].classList.add("correct");
+   fb.className="quick-feedback show good";
+   fb.textContent="Correct. "+x.e;
+ } else {
+   btns[j].classList.add("wrong");
+   btns[x.a].classList.add("correct");
+   fb.className="quick-feedback show bad";
+   fb.textContent="Review. "+x.e;
+ }
+}
+["adjadv","prefixes","frequency","manner","comparatives","superlatives","quantifiers","intensifiers"].forEach(renderMini);
+
+renderSet("adjadv","adjAdvQs");renderSet("prefixes","prefixQs");renderSet("comparison","comparisonQs");renderSet("frequency","frequencyQs");renderSet("quantifiers","quantifierQs");renderSet("intensifiers","intensifierQs");renderSet("timed","timedQs");
+let remaining=600,timer=null,elapsedSeconds=0;
+function drawClock(){const m=String(Math.floor(Math.max(remaining,0)/60)).padStart(2,"0"),s=String(Math.max(remaining,0)%60).padStart(2,"0");document.getElementById("clock").textContent=`${m}:${s}`}
+function formatElapsed(sec){return `${Math.floor(sec/60)} min ${String(sec%60).padStart(2,"0")} sec`}
+function finishTimedBlock(){timedFinished=true;if(timer){clearInterval(timer);timer=null}const correct=scores.timed,incorrect=15-correct,pct=Math.round(correct/15*100),result=document.getElementById("timedResult");let pace=elapsedSeconds<=480?"Fast pace":elapsedSeconds<=600?"Good exam pace":"Needs faster pacing";let accuracy=pct>=93?"Excellent accuracy":pct>=80?"Strong accuracy":pct>=73?"Close to target accuracy":"Accuracy needs reinforcement";let improve=incorrect===0?["Maintain this accuracy while keeping the same pace."]:["Classify each error by topic before reviewing it.",incorrect>=3?"Prioritize accuracy before increasing speed.":"Keep the pace, but pause when two forms look possible and identify the grammar function first."];result.innerHTML=`<h3>Timed Block Feedback</h3><p><b>Time:</b> ${formatElapsed(elapsedSeconds)} · <b>Correct:</b> ${correct}/15 · <b>Incorrect:</b> ${incorrect}/15 · <b>Accuracy:</b> ${pct}%</p><div class="grid2"><div class="card mintc"><h3>${accuracy}</h3><p>${correct} correct answers out of 15.</p></div><div class="card skyc"><h3>${pace}</h3><p>${elapsedSeconds<=600?"You completed the block within the suggested 10-minute target.":"You went beyond the suggested 10-minute target."}</p></div></div><div class="rule"><b>Points to improve:</b><ul>${improve.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;result.style.display="block";document.getElementById("timerMsg").textContent="Completed — timer stopped automatically."}
+document.getElementById("startTimer").addEventListener("click",()=>{if(timer||timedFinished)return;timer=setInterval(()=>{remaining--;elapsedSeconds++;drawClock();if(remaining<=0){clearInterval(timer);timer=null;document.getElementById("timerMsg").textContent="10-minute target reached — continue if needed."}},1000)});
+document.getElementById("resetTimer").addEventListener("click",()=>{clearInterval(timer);timer=null;remaining=600;elapsedSeconds=0;timedFinished=false;drawClock();document.getElementById("timerMsg").textContent="";document.getElementById("timedResult").style.display="none";renderSet("timed","timedQs")});
+function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
+const matchPairs=[["adjective","describes a noun or state"],["adverb","describes how an action happens"],["comparative","compares two items"],["superlative","highest or lowest degree in a group"],["much","used with noncount nouns"]];
+let matchLeft=null,matchRight=null,matchDone=0;
+function renderMatch(){matchLeft=matchRight=null;matchDone=0;document.getElementById("matchScore").textContent="0";document.getElementById("matchFill").style.width="0%";const grid=document.getElementById("matchGrid");grid.innerHTML="";const left=document.createElement("div"),right=document.createElement("div");shuffle(matchPairs.map((p,i)=>({i,t:p[0]}))).forEach(x=>{const b=document.createElement("button");b.className="match-choice";b.textContent=x.t;b.dataset.i=x.i;b.dataset.side="l";b.onclick=()=>selectMatch(b);left.appendChild(b)});shuffle(matchPairs.map((p,i)=>({i,t:p[1]}))).forEach(x=>{const b=document.createElement("button");b.className="match-choice";b.textContent=x.t;b.dataset.i=x.i;b.dataset.side="r";b.onclick=()=>selectMatch(b);right.appendChild(b)});grid.append(left,right)}
+function selectMatch(btn){if(btn.classList.contains("done"))return;const side=btn.dataset.side;document.querySelectorAll(`.match-choice[data-side="${side}"]`).forEach(x=>x.classList.remove("selected"));btn.classList.add("selected");if(side==="l")matchLeft=btn;else matchRight=btn;if(matchLeft&&matchRight){if(matchLeft.dataset.i===matchRight.dataset.i){matchLeft.classList.remove("selected");matchRight.classList.remove("selected");matchLeft.classList.add("done");matchRight.classList.add("done");matchDone++;document.getElementById("matchScore").textContent=String(matchDone*2);document.getElementById("matchFill").style.width=(matchDone/5*100)+"%";matchLeft=matchRight=null}else{const a=matchLeft,b=matchRight;a.classList.add("bad");b.classList.add("bad");setTimeout(()=>{a.classList.remove("bad","selected");b.classList.remove("bad","selected")},300);matchLeft=matchRight=null}}}
+document.getElementById("resetMatch").addEventListener("click",renderMatch);
+const memoryPairs=[["Adverb","She answered quickly."],["Comparative","This test is easier than the last one."],["Superlative","It is the most useful option."],["A few","I have a few friends here."],["Much","There isn't much time."],["Enough","The room is big enough."]];
+let memoryDeck=[],memoryFirst=null,memoryLock=false,memoryMatches=0;
+function renderMemory(){memoryFirst=null;memoryLock=false;memoryMatches=0;document.getElementById("memoryScore").textContent="0";document.getElementById("memoryFill").style.width="0%";memoryDeck=shuffle(memoryPairs.flatMap((p,i)=>[{pair:i,text:p[0]},{pair:i,text:p[1]}]));const grid=document.getElementById("memoryGrid");grid.innerHTML="";memoryDeck.forEach((c,i)=>{const b=document.createElement("button");b.className="memory-card";b.innerHTML=`<span class="mem-num">${i+1}</span><span class="mem-face">${c.text}</span>`;b.addEventListener("click",()=>flipMemory(i,b));grid.appendChild(b)})}
+function flipMemory(i,b){if(memoryLock||b.classList.contains("matched")||b.classList.contains("flipped"))return;b.classList.add("flipped");if(memoryFirst===null){memoryFirst={i,b};return}memoryLock=true;const first=memoryFirst;if(memoryDeck[first.i].pair===memoryDeck[i].pair){setTimeout(()=>{first.b.classList.remove("flipped");b.classList.remove("flipped");first.b.classList.add("matched");b.classList.add("matched");memoryMatches++;const pts=memoryMatches===6?10:Math.round(memoryMatches/6*10);document.getElementById("memoryScore").textContent=pts;document.getElementById("memoryFill").style.width=(memoryMatches/6*100)+"%";memoryFirst=null;memoryLock=false},300)}else{setTimeout(()=>{first.b.classList.remove("flipped");b.classList.remove("flipped");memoryFirst=null;memoryLock=false},650)}}
+document.getElementById("resetMemory").addEventListener("click",renderMemory);renderMatch();renderMemory();
+window.addEventListener("scroll",()=>{const h=document.documentElement.scrollHeight-innerHeight;document.getElementById("scrollProgress").style.width=(h?scrollY/h*100:0)+"%"});
+</script></body></html>
